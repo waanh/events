@@ -2,6 +2,13 @@
   "name": "events",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0",
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "lint": "eslint .",
+    "deploy": "gh-pages -d dist"
+  },
   "repository": "git@github.com:waanh/events.git",
   "author": "waanh <anhimovalera@gmail.com>",
   "license": "MIT",
