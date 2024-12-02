@@ -1,3 +1,3 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/github/<events>?branch=main&svg=true)](https://ci.appveyor.com/project/events)
+[![Build status](https://ci.appveyor.com/api/projects/status/v67t46q6svo135so?svg=true)](https://ci.appveyor.com/project/waanh/events-mpt27)
 
 [GitHub Pages](https://waanh.github.io/events/)
