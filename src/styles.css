@@ -20,7 +20,7 @@ body {
   }
   
   .goblin {
-    background-image: url('../img/goblin.png');
+    background-image: url('./goblin.png');
     background-size: cover;
     width: 80%;
     height: 80%;

@@ -1,5 +1,5 @@
 import Game from './Game';
-import '../css/styles.css';
+import './styles.css';
 
 const board = document.querySelector('.board');
 const scoreElement = document.querySelector('.score');
