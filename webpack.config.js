@@ -1,14 +1,15 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ASSET_PATH = process.env.CI ? '/events/' : '/';
+const ASSET_PATH = process.env.CI ? '/events/' : './'; 
 
 module.exports = {
-  entry: './src/index.js', 
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: ASSET_PATH, 
+    publicPath: ASSET_PATH,
+    clean: true, 
   },
   module: {
     rules: [
@@ -29,23 +30,20 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]', 
+        },
       },
       {
         test: /\.css$/i,
-        use: [
-          MiniCssExtractPlugin.loader, 'css-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: path.resolve(__dirname, './src/index.html'), 
+      template: path.resolve(__dirname, './src/index.html'),
       filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
