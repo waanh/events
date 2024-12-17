@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: ASSET_PATH,
+    publicPath: '',
     clean: true, 
   },
   module: {
@@ -45,6 +45,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, './src/index.html'),
       filename: 'index.html',
+      inject: true,
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
