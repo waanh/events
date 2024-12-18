@@ -1,14 +1,14 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ASSET_PATH = process.env.CI ? '/events/' : './'; 
+const ASSET_PATH = process.env.CI ? '' : './'; 
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '',
+    publicPath: ASSET_PATH,
     clean: true, 
   },
   module: {
