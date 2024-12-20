@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"No tests specified\" && exit 0",
     "start": "webpack serve --mode development",
-    "build": "NODE_ENV=production webpack --mode production",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
     "lint": "eslint .",
     "deploy": "gh-pages -d dist"
   },
