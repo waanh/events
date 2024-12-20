@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ASSET_PATH = process.env.CI ? '' : './'; 
+const ASSET_PATH = process.env.NODE_ENV === 'production' ? '/events/' : '/';
 
 module.exports = {
   entry: './src/index.js',
