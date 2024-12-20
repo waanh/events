@@ -44,7 +44,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, './src/index.html'),
       filename: 'index.html',
-      inject: true,
+      inject: 'body',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
